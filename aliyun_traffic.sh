@@ -47,7 +47,7 @@ total_bytes=$((total_in + total_out))
 # 检查是否达到9.5GB的阈值
 if [ "$total_bytes" -ge "$SHUTDOWN_THRESHOLD" ]; then
     echo "总流量已达到 9.5GB，系统即将关机..."
-    shutdown -h now
+    sudo shutdown -h now
 fi
 
 # 自适应单位输出
